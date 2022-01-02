@@ -8,35 +8,35 @@ permalink:           /:title
 relative_permalinks: true
 
 # Setup
-timezone:            your timezone # eg. Asia/Kathmandu
-locale:              your locale language # eg. en_us
-name:				         site name
-title:               site title
-tagline:             'tagline'
-description:         'description'
-url:                 site url
-rss:                 rss feed url
+timezone:            Asia/Tehran # eg. Asia/Kathmandu
+locale:              fa-ir # eg. en_us
+name:				         Trip
+title:               trip
+tagline:             'trip'
+description:         'فیلم سفرها'
+url:                 trip.mhkarami97.ir
+rss:                 trip.mhkarami97.ir/feed.xml
 baseurl:             '/'
 baseurl_posts_img:   '/assets/images/posts/'
 baseurl_featured_img: '/assets/images/hero/'
 baseurl_featured_thumbnail: '/assets/images/thumbnail/'
 baseurl_javascripts: '/assets/javascripts/'
 icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
-disqus:              disqus_shortname # get it on https://disqus.com/admin/
+#disqus:              disqus_shortname # get it on https://disqus.com/admin/
 
 author:
-  name:           	 your name
-  url:            	 your site url
-  facebook:          username
-  twitter:           username
-  google_plus:       username
-  linkedin:          username
-  dribbble:          username
-  pinterest:         username
-  kiva:              username
+  name:           	 Mohammad Hossein Karami
+  url:            	 mhkarami97.ir
+  facebook:          mhkarami97
+  twitter:           mhkarami97
+  #google_plus:       username
+  linkedin:          mhkarami97
+  #dribbble:          username
+  #pinterest:         username
+  #kiva:              username
 
-fb_admins:           your facebook profile id
-fb_appid:            your facebook app id
+#fb_admins:           your facebook profile id
+#fb_appid:            your facebook app id
 
 # Server
 destination:      	 ./_site
