@@ -1,50 +1,56 @@
 ---
+title: "Pintereso Free Jekyll Theme"
 layout: default
-title: Mickey Theme for Jekyll
+description: "A great collection of free and premium themes and templates."
 ---
 
-<section class="section--first section--frontpage">
-  <div class="section-title">
-    <div class="container">
-      <h1 class="textLogo textLogo--frontpage">
-        {{ site.name }}
-      </h1>
-      <div class="postMeta-wrapper postMeta-wrapper--frontpage">
-        <ul class="postMeta">
-          <li class="postMeta-tagline">
-            فیلم سفرها
-          </li>
-        </ul>
-      </div>
+<section class="mt-4 mb-5">
+    
+    <div class="container mb-4">
+        <h1 class="font-weight-bold title">Explore</h1>    
+        <div class="row">
+        {% include menu-categories.html %}
+        </div>
     </div>
-  </div>
-</section>
-<section class="section--postsWrapper">
-  <div class="container">
-    <div class="blockGroup">
-      <ul class="blockGroup-list">
-        {% for post in site.posts %}
-          <li class="block">
-            <div class="postArticle-wrapper">
-              <article class="postArticle postArticle--short">
-                {% if post.image.feature %}
-                  <a href="{{ post.url }}">
-                    <div class="postArticle-image desaturate" style="background-image:url('{{ post.image.feature | prepend: site.baseurl_featured_img }}')">
-                    </div>
-                  </a>
-                {% else %}
-                <a href="{{ post.url }}">
-                  <div class="postArticle-image" style="background-image:url('{{site.baseurl}}assets/images/logo-black.svg')">
-                  </div>
-                </a>
-                {% endif %}
-                <a class="postArticle-title" href="{{ post.url }}">{{ post.title }}</a>
-              </article>
-              <div class="block-postMeta">{{ post.date | date_to_string }}</div>
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
+
+    
+<div class="container-fluid">
+    
+    <div class="card-columns">        
+        {% for post in paginator.posts reversed %}
+            {% include card-post.html %}
+        {% endfor %}            
     </div>
-  </div>
+
+    <div class="row justify-content-center mt-5">
+     <!-- Pagination links -->
+        {% if paginator.total_pages > 1 %}
+        <div class="pagination"> 
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+          {% else %}
+            <span class="prev">&laquo; Prev</span>
+          {% endif %}
+
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <span class="webjeda">{{ page }}</span>
+            {% elsif page == 1 %}
+              <a href="{{site.baseurl}}/">{{ page }}</a>
+            {% else %}
+              <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+          {% else %}
+            <span class="next">Next &raquo;</span>
+          {% endif %}
+        </div>
+        {% endif %}      
+    </div>
+
+</div>    
+  
 </section>

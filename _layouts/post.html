@@ -1,86 +1,65 @@
 ---
 layout: default
 ---
-<article class="postWrapper">
-  <section class="section--first is-darkBackgrounded u-table">
-    <div class="section-backgroundImage">
-
-      {% if page.image.feature %}
-        <img class="post-featuredImage" src="{{ page.image.feature | prepend: site.baseurl_featured_img }}" style="
-        {% if page.image.topPosition %}
-          top:{{ page.image.topPosition }};
-        {% endif %}
-        " alt="">
-      {% endif %}
-
+<section class="bg-gray200 pt-5 pb-5">    
+    <div class="container">
+    	<div class="row justify-content-center">
+    		<div class="col-md-8">
+                
+    			<article class="card">
+                    
+                 {% if page.image %} 
+                    <span class="pinme">
+                        <a data-pin-do="buttonPin" data-pin-tall="true" href="https://www.pinterest.com/pin/create/button/?url={{site.url}}{{site.baseurl}}{{page.url}}&media={{site.url}}{{site.baseurl}}/{{page.image}}&description={{ page.title }}- {{ page.content | strip_html | truncatewords:25 }}"></a>
+                    </span>
+                    <img class="card-img-top mb-2" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}"> 
+                {% endif %}
+                    
+    			<div class="card-body">
+                    
+    				<h1 class="display-4">
+    				    {{page.title}} 
+                    </h1>                    
+                     
+                    <small class="text-muted d-block mb-3">
+                        {% unless page.metadate == "hide" %} 
+                            {{ page.date | date: '%B %d, %Y' }} 
+                        {% endunless %}
+                        {% if page.author %}
+                            , by {{page.author | capitalize}} 
+                        {% endif %}
+                    </small>                    
+                    
+    				{{ content }}
+                    
+                    {% if page.visit %}
+                    <p><a target="_blank" href="{{page.visit}}" class="btn btn-gray d-block font-weight-bold">
+                        Visit <i class="fas fa-external-link-alt"></i></a>
+                    </p>
+                    {% endif %}
+                    
+                    {% for category in page.categories %}
+                      <a class="btn btn-sm btn-primary mt-2" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">
+                        # {{ category | downcase }}
+                      </a>
+                    {% endfor %}
+                    
+    				{% include comments.html %}
+                    
+    			</div>  
+                    
+    			</article>
+                
+                <div class="PageNavigation">
+                  {% if page.next.url %}
+                    <a class="prev" href="{{site.baseurl}}{{page.next.url}}"><i class="fa fa-angle-left"></i> </a>
+                  {% endif %}
+                  {% if page.previous.url %}
+                    <a class="next" href="{{site.baseurl}}{{page.previous.url}}"><i class="fa fa-angle-right"></i></a>
+                  {% endif %}
+                </div>
+                
+    		</div>
+    	</div>
     </div>
-    <div class="section-gradient
-    {% if page.bgGradientOpacity == "darker" %}
-      section-gradient--darker
-    {% elsif page.bgGradientOpacity == "lighter" %}
-      section-gradient--lighter
-    {% endif %}
-    "></div>
-    <div class="section-title is-darkBackgrounded u-tableCell u-verticalAlignMiddle">
-      <div class="container">
-        <h2>{{ page.title }}</h2>
-        <div class="postMeta-wrapper">
-          <ul class="postMeta">
-            <li class="postMeta-datetime">
-              <time datetime="{{ page.date }}">
-                {{ page.date | date_to_string }}
-              </time>
-            </li>
-            <li class="postMeta-author">
-              By {{ site.author.name }}
-            </li>
-            <li class="postMeta-tags">
-              {{ page.categories }}
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section--last">
-    <div class="container container--content">
-      <div class="content-body">
-
-        {{ content }}
-
-      </div>
-    </div>
-    <hr class="u-clearHr"/>
-    <hr class="u-clearHr"/>
-  </section>
-  <footer class="postFooter">
-    {% if page.previous.url %}
-      <section class="section--prePost is-darkBackgrounded u-table">
-        <div class="section-backgroundImage section-backgroundImage--previousPage">
-          <img class="post-featuredImage"
-          {% if page.previous.image.feature %}
-            src="{{ page.previous.image.feature | prepend: site.baseurl_featured_img }}"
-          {% endif %}
-          style="top:0" alt="">
-        </div>
-        <div class="section-gradient
-        {% if page.previous.bgGradientOpacity == "darker" %}
-          section-gradient--darker
-        {% elsif page.previous.bgGradientOpacity == "lighter" %}
-          section-gradient--lighter
-        {% endif %}
-        "></div>
-        <div class="section-title u-tableCell u-verticalAlignMiddle">
-          <div class="container">
-            <h4>Next story:</h4>
-            <a class="prev" href="{{page.previous.url}}">
-              <h2>{{page.previous.title}}</h2>
-            </a>
-          </div>
-        </div>
-      </section>
-    {% endif %}
-  </footer>
-</article>
-
-{% include modal.html %}
+</section>

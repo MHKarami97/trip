@@ -1,52 +1,46 @@
+# Site
+name: 'کلیپ سفرها'
+description: 'فیلم سفرنامه‌ها'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: '/'
+avatar: 'assets/images/sal.jpg'
+#disqus: ''
+email: 'mhkarami97@gmail.com'
 
-# Syntax highlighting
-markdown:            redcarpet
-highlighter:         pygments
+include: ["_pages"]
+permalink: /:title/
 
-# Permalinks
-permalink:           /:title
-relative_permalinks: true
-
-# Setup
-timezone:            Asia/Tehran # eg. Asia/Kathmandu
-locale:              fa-ir # eg. en_us
-name:				         Trip
-title:               trip
-tagline:             'trip'
-description:         'فیلم سفرها'
-url:                 trip.mhkarami97.ir
-rss:                 trip.mhkarami97.ir/feed.xml
-baseurl:             '/'
-baseurl_posts_img:   '/assets/images/posts/'
-baseurl_featured_img: '/assets/images/hero/'
-baseurl_featured_thumbnail: '/assets/images/thumbnail/'
-baseurl_javascripts: '/assets/javascripts/'
-icon:                your site icon path # /assets/img/icon.png [best 300px X 300px]
-#disqus:              disqus_shortname # get it on https://disqus.com/admin/
-
-author:
-  name:           	 Mohammad Hossein Karami
-  url:            	 mhkarami97.ir
-  facebook:          mhkarami97
-  twitter:           mhkarami97
-  #google_plus:       username
-  linkedin:          mhkarami97
-  #dribbble:          username
-  #pinterest:         username
-  #kiva:              username
-
-#fb_admins:           your facebook profile id
-#fb_appid:            your facebook app id
-
-# Server
-destination:      	 ./_site
-exclude:          	 [".editorconfig", ".gitignore", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "sass", "haml"]
-port:             	 9001
-
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+ 
+# Defaults
 defaults:
-  -
-    scope:
+
+  # all posts
+  - scope:
       path: "_posts"
-      type: "posts"
     values:
-      layout: "default"
+      layout: post
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Pagination
+paginate: 20
+
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
