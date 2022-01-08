@@ -15,7 +15,7 @@ layout: default
                     <img class="card-img-top mb-2" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}"> 
                 {% endif %}
                     
-    			<div class="card-body">
+    			<div class="card-body" style="direction: rtl;text-align: right;">
                     
     				<h1 class="display-4">
     				    {{page.title}} 
@@ -34,7 +34,7 @@ layout: default
                     
                     {% if page.visit %}
                     <p><a target="_blank" href="{{page.visit}}" class="btn btn-gray d-block font-weight-bold">
-                        Visit <i class="fas fa-external-link-alt"></i></a>
+                        سفرنامه <i class="fas fa-external-link-alt"></i></a>
                     </p>
                     {% endif %}
                     
@@ -43,9 +43,7 @@ layout: default
                         # {{ category | downcase }}
                       </a>
                     {% endfor %}
-                    
-    				{% include comments.html %}
-                    
+       
     			</div>  
                     
     			</article>
