@@ -3,7 +3,7 @@ title: "تماس"
 permalink: "/contact.html"
 ---
 
-<form action="https://formspree.io/f/mpzbwnop" method="POST" style="direction:rtl;text-align:right;">    
+<form action="https://formspree.io/f/mpzbwnop" method="POST" style="direction: rtl;text-align: right;">    
 <p>لطفا پیام خود را به {{site.name}} ارسال کنید</p>
 <div class="form-group row">
 <div class="col-md-6">
