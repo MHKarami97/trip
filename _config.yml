@@ -4,6 +4,7 @@ description: 'فیلم سفرنامه‌ها'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: '/'
+url: "https://trip.mhkarami97.ir"
 avatar: 'assets/images/my.jpg'
 #disqus: ''
 email: 'mhkarami97@gmail.com'
