@@ -3,7 +3,7 @@ title:  "تنگه چیتاوه به تنگه براق"
 metadate: "hide"
 categories: [ buraq, chitab, nature, river, shiraz ]
 image: "/assets/images/chitab_to_buraq.jpg"
-visit: "https://travel.mhkarami97.ir/chitab_to_buraq"
+visit: "https://travel.mhkarami97.ir/chitab_to_buraq/"
 ---
 
 <p align="center">

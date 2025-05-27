@@ -3,7 +3,7 @@ title:  "خط ساحلی بندرعباس به بوشهر"
 metadate: "hide"
 categories: [ hormouzgan, bousheher, nature, lake ]
 image: "/assets/images/bandar_abbas_to_bandar_bushehr.jpg"
-visit: "https://travel.mhkarami97.ir/bandar_abbas_to_bandar_bushehr"
+visit: "https://travel.mhkarami97.ir/bandar_abbas_to_bandar_bushehr/"
 ---
 
 <p align="center">

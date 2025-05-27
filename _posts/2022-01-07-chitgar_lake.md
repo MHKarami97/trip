@@ -3,7 +3,7 @@ title:  "دریاچه چیتگر"
 metadate: "hide"
 categories: [ Cycle, Lake, Tehran, chitgar_lake ]
 image: "/assets/images/chitgar_lake.jpg"
-visit: "https://travel.mhkarami97.ir/chitgar_lake"
+visit: "https://travel.mhkarami97.ir/chitgar_lake/"
 ---
 
 <p align="center">

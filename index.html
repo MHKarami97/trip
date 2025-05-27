@@ -5,12 +5,6 @@ description: "کلیپ سفرنامه‌ها"
 ---
 
 <section class="mt-4 mb-5" style="direction: rtl;text-align: right;">
-    
-    <div class="container mb-4" style="direction: rtl;">
-        <h1 class="font-weight-bold title" style="text-align: right;">کلیپ‌ها</h1>    
-    </div>
-
-    
 <div class="container-fluid">
     
     <div class="card-columns">        
@@ -24,7 +18,7 @@ description: "کلیپ سفرنامه‌ها"
         {% if paginator.total_pages > 1 %}
         <div class="pagination"> 
           {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; قبلی</a>
           {% else %}
             <span class="prev">&laquo; قبلی</span>
           {% endif %}
@@ -40,7 +34,7 @@ description: "کلیپ سفرنامه‌ها"
           {% endfor %}
 
           {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">بعدی &raquo;</a>
           {% else %}
             <span class="next">بعدی &raquo;</span>
           {% endif %}
