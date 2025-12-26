@@ -3,7 +3,7 @@ title:  "بندر عباس"
 metadate: "hide"
 categories: [ sea, bandar_abbas, hormuzgan ]
 image: "/assets/images/bandar_abbas.jpg"
-visit: "https://travel.mhkarami97.ir/bandar_abbas"
+visit: "https://travel.mhkarami97.ir/bandar_abbas/"
 ---
 
 <p align="center">

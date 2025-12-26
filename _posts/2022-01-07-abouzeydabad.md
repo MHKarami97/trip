@@ -3,7 +3,7 @@ title:  "کویر ابوزیدآباد"
 metadate: "hide"
 categories: [ Desert, Isfahan, abouzeydabad ]
 image: "/assets/images/abouzeydabad.jpg"
-visit: "https://travel.mhkarami97.ir/abouzeydabad"
+visit: "https://travel.mhkarami97.ir/abouzeydabad/"
 ---
 
 <p align="center">

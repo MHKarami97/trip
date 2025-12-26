@@ -3,7 +3,7 @@ title:  "کردستان"
 metadate: "hide"
 categories: [ kurdistan, nature, lake, mountain ]
 image: "/assets/images/kurdistan.jpg"
-visit: "https://travel.mhkarami97.ir/kurdistan"
+visit: "https://travel.mhkarami97.ir/kurdistan/"
 ---
 
 <p align="center">

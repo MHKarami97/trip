@@ -3,7 +3,7 @@ title:  "هفت چشمه"
 metadate: "hide"
 categories: [ River, Waterfall, Alborz, haft_cheshme ]
 image: "/assets/images/haft_cheshme.jpg"
-visit: "https://travel.mhkarami97.ir/haft_cheshme"
+visit: "https://travel.mhkarami97.ir/haft_cheshme/"
 ---
 
 <p align="center">

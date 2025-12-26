@@ -3,7 +3,7 @@ title:  "الیمستان"
 metadate: "hide"
 categories: [ Mount, Jungle, Mazandaran, Alimestan ]
 image: "/assets/images/alimestan.jpg"
-visit: "https://travel.mhkarami97.ir/alimestan"
+visit: "https://travel.mhkarami97.ir/alimestan/"
 ---
 
 <p align="center">
